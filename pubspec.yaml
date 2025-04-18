@@ -13,7 +13,7 @@ dependencies:
   firebase_vertexai: ^1.0.2
   flutter:
     sdk: flutter
-  signature: ^5.5.0
+  signature: ^6.0.0
 
 dev_dependencies:
   all_lint_rules_community: ^0.0.43
