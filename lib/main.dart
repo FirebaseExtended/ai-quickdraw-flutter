@@ -119,12 +119,16 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> _lose() async {
+    if (_timer == null) return; // already finished this round
+
     _cancelTimer();
     await _notifyUser('Time is up!');
     _nextDrawing();
   }
 
   Future<void> _win() async {
+    if (_timer == null) return; // already finished this round
+
     _cancelTimer();
     setState(() => _score++);
     await _notifyUser('You got it!');
